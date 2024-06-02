@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Fetch the external IP address
+external_ip=$(wget -q -O - checkip.dyndns.com | grep -Po '[\d.]+')
+# Colorize the IP address (using green for demonstration)
+colorized_ip=$(echo -e "\033[1;32m$external_ip\033[0m")
+
+# Print the colorized IP address
+echo "Your IP address is: $colorized_ip"
